@@ -1,13 +1,64 @@
 <!DOCTYPE html>
-<html lang="en_US">
+<html lang="en-US">
   <head>
-    <meta charset="UTF-8" />
-    <title>Charasan's Github</title>
+    <meta charset="UTF-8">
+    <title>Charasan's Lair</title>
+    <meta name="author" content="Eddie Fuller" />
+    <meta name="description" content="Charasan.com: a webdev whiteboard ran by an insane manboy." />
+    <meta name="keywords" content="Charasan, charasan, eddie, fuller,web developer,web,developer,programming" />
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/html5reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <div style="width:800px;margin:0 auto;margin-top:100px;text-align:center;">
-      <h1>Charasan's Github</h1>
-      <p>Nothing fancy here yet. Just getting things set up for now.</p>
-    </div>
+    <div id="site-wrapper">
+      <header>
+        <div style="position:relative;width:700px;height:44px;margin:0 auto;">
+          <img id="logo-top" src="images/newlogo.png" alt="" style="position:absolute;z-index:50;" />
+          <img id="logo-bottom" src="images/logo-bottom.png" alt="" style="position:absolute;left:100px;z-index:10;" />
+          <img id="sheen" src="images/sheen.png" alt="" style="position:absolute;left:50px;z-index:20;" />
+          <img id="shine" src="images/shine.png" alt="" style="position:absolute;top:0px;right:99px;z-index:55;display:none;" />
+        </div>
+      </header> <!-- header -->
+      <div class="clearfloaters"></div>
+      <div id="main-content">
+        <div style="padding:15px;">
+          <section id="content-inner" style="padding:10px;text-align:center;">
+            <h1>Charasan on Github</h1>
+            <br />
+            <p>A little front page for my stuff here on Github. Based off my site at <a rel="external" href="http://www.charasan.com">Charasan.com</a>. The main site itself is little more than a whiteboard for me, so don't expect anything fancier than what you see here.</p>
+            <p>My projects here on Github:</p>
+            <ul>
+              <li><a rel="external" href="https://github.com/charasan/jquery-audio">jQuery Audio:</a><span> This was a very early plugin I wrote, one of my first. More just a test to see if I could write a plugin, from the early days of HTML5.</span><div class="clearfix"></div></li>
+              <li><a rel="external" href="https://github.com/charasan/xray">X-Ray Effect:</a><span> Just a little jQuery/CSS trickery to give the effect of an X-Ray with two images. As the 'window' slides, data points can be revealed as well.</span><div class="clearfix"></div></li>
+              <li><a rel="external" href="https://github.com/charasan/thumbnail">Dynamic Thumbnails:</a><span> Create thumbnails of any size on the fly, and cache the resulting image for later use and quicker load times.</span><div class="clearfix"></div></li>
+            <ul>
+          </section>
+          <div class="clearfloaters"></div>
+        </div>
+      </div>
+      <div class="clearfloaters"></div>
+      <footer>
+        <div class="footer">
+          <p>This webpage designed and written by  <a href="mailto:charasan(remove)@gmail.com"><img src="images/logo-name-sm.png" alt="Charasan" style="vertical-align:middle;" /></a></p>
+          <p>Copyright &copy;<?php echo date('Y');?> Eddie Fuller</p>
+        </div> <!-- footer -->
+      </footer><!-- footer-wrap -->
+    </div><!-- end site-wrapper -->
+    <script>
+<!--//
+      $(document).ready(function(){
+        $('img#sheen').animate({left: 600}, 3000, function() { $('img#sheen').css('display', 'none'); $('img#shine').fadeIn("fast").delay(300).fadeOut("fast"); });
+        $('a[rel="art"], a[rel="external"]').attr("target", "_blank");
+        $('a[rel="top"]').attr("target", "_TOP");
+      });
+//-->
+    </script>
   </body>
 </html>
